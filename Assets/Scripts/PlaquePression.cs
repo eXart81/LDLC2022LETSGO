@@ -15,6 +15,7 @@ public class PlaquePression : MonoBehaviour
 
     private void Update()
     {
+        
     }
 
     void OnTriggerStay(Collider collider)
