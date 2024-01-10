@@ -20,5 +20,12 @@ public class Projectile : MonoBehaviour
         Vector3 newPosition = currentPosition + direction * speed * Time.deltaTime;
 
         rigidbody.MovePosition(newPosition);
+   
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        collision.gameObject.GetComponent<Renderer>().material.color = Random.ColorHSV();
+
+    }
+
 }

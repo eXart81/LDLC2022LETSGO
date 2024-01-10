@@ -7,10 +7,12 @@ public class PlaquePression : MonoBehaviour
 {
     [SerializeField] int nombreRandom;
     [SerializeField] private GameObject door;
-    
+    [SerializeField] AudioSource audioData;
+
     void OnTriggerEnter(Collider collider)
     {
         Debug.Log("Il y a eu collision !!!");
+        audioData.Play(0);
     }
 
     private void Update()
@@ -27,5 +29,7 @@ public class PlaquePression : MonoBehaviour
     void OnTriggerExit(Collider collider)
     {
         door.SetActive(true);
+        
+
     }
 }
