@@ -13,6 +13,7 @@ public class PlayerShoot : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Instantiate(projectilePrefab, Camera.main.transform.position + Camera.main.transform.forward * 2, Camera.main.transform.rotation);
+            
         }
     }
 }
